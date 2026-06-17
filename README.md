@@ -31,10 +31,10 @@ An image showing the "Unfollow" feature:
 The user cannot follow themselves:
 ![can't "follow" yourself](https://gcdnb.pbrd.co/images/WXHGyXa4Ua2c.png)
 
-The user is changing your post
+The user is changing your post:
 ![image from edit button](https://github.com/user-attachments/assets/aa54902d-7550-43b2-850d-233a63eba0a4)
 
-The user changing your post
+The user changing your post:<br>
 ![Image from the message that the user's post has been edited](https://github.com/user-attachments/assets/d6cbb646-12d9-490e-a215-11b3a7add79f)
 
 
