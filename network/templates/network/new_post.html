@@ -1,0 +1,19 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div class="wrap-post">
+        <h3 id="title">New Post</h3>
+        <form class="form_post" method="post">
+            <div>
+                <textarea name="" id="description" rows="20" cols="80" required></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Post">
+        </form>
+        
+    </div>
+{%endblock%}
+
+{% block script  %}
+    <script src="{% static 'network/post.js' %}" defer></script>
+{% endblock %}

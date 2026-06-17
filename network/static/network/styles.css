@@ -1,0 +1,95 @@
+body{
+    font-size: 14px;;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+i{
+    color:#808080;
+}
+.card-body p{
+    margin: 0;
+}
+
+.card-like{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-top: 10px;
+}
+
+.content-user{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+    gap: 50px;
+}
+
+.content-user-post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+#action_edit{
+    margin-top: 10px;
+}
+
+.post-id{
+    display: none;
+}
+
+.card-text{
+    margin-bottom: 10px;
+}
+
+.icon-heart{
+    width: 20px;
+}
+.icon-heart:hover, .icon-heart-filled:hover{
+    cursor: pointer;
+}
+
+.icon-heart-filled{
+    display: none;
+    width: 20px;
+}
+
+.user-follow{
+    display: flex;
+    gap: 25px
+}
+
+.username{
+    font-weight: bold;
+}
+
+.index-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-info h2{
+    margin-top: 20px;
+}
+
+.login-content{
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.wrap-post{
+    margin: 20px;
+}
+.wrap-post input{
+    margin-top: 20px;
+}

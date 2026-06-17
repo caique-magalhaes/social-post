@@ -1,0 +1,66 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+   
+
+    <div class="index-info">
+         <h2>FOLLOWING POSTS</h2>
+        {% for post in page_obj %}
+            <div class="card" style="width: 50%; margin: 5px;">
+                <div class="card-body">
+                    <span  class="post-id">{{post.id}}</span>
+                    <a href="{% url 'user_page' post.user.id %}"><h5 class="card-title">{{post.user.username}}</h5></a>
+                    <p class="card-text">{{post.description}}</p>
+                    <p><i>{{post.date}}</i></p>
+
+
+                    <div class="card-like">
+                    {% csrf_token %}
+                        <img class="icon-heart-filled" src="{% static 'network/filled-heart.png' %}" alt="heart-icon">
+
+                        <form>
+                            <img class="icon-heart" src="{% static 'network/drawing-heart.png' %}" alt="heart-icon">
+                        </form>
+
+                        <i class="like_number">{{post.likes}}</i>
+                    </div>
+                </div>
+            </div>
+        {%endfor%}
+
+        <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                        <!-- <a href="?page=1">&laquo; first</a> -->
+                         <li class="page-item">
+
+                             <a class="page-link" href="?page={{ page_obj.previous_page_number}}">previous</a>
+                         </li>
+                    {% endif %}
+                
+                         <li class="page-item">
+
+                             <a class="page-link" >
+     
+                                 Page {{ page_obj.number }} of {{page_obj.paginator.num_pages}}.
+                             </a>
+                         </li>
+                         {% if page_obj.has_next %}
+                         <li class="page-item">
+
+                             
+                                 <a class="page-link" href="?page={{page_obj.next_page_number }}">next</a>
+                                 <!-- <a href="?page={{page_obj.paginator.num_pages }}">last &raquo;</a> -->
+                         </li>
+                          {% endif %}
+
+                </ul>
+
+            </nav>
+    </div>
+{% endblock %}
+
+{% block script  %}
+    <script src="{% static 'network/action_like.js' %}" defer></script>
+ {% endblock %}
