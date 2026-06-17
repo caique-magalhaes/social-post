@@ -1,6 +1,6 @@
 # Social Post
 
-Social Post is a full-stack, single-page social media application. It allows users to create posts, follow profiles, interact with content via asynchronous likes, and edit posts without reloading the page.
+Social Post is a full-stack, multi-page social media application driven by robust server-side routing pipelines. While the application leverages dedicated Django pathways to navigate distinct profile views and tailored subscriber feeds, it integrates advanced client-side JavaScript to execute dynamic content edits and real-time social interactions seamlessly without full-page refreshes.
 
 ## 🛠️ Tech Stack
 * **Backend:** Python, Django
